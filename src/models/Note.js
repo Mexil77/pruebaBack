@@ -22,7 +22,7 @@ obligattorio que los tenga todos lo ideal es que si los tenga.
 */
 const NoteSchema = new Schema(
 	{
-		userId: Number,
+		userId: String,
 		title: String,
 		body: String,
 	},

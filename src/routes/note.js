@@ -21,7 +21,13 @@ En esta linea importamos las funcionalidades del controlador de notas
 que definimos anteriormente para poder asignarle una funcion a cada
 ruta que definamos para este schema.
 */
-const { getAllNotes } = require("../controllers/noteController");
+const {
+	getAllNotes,
+	createNote,
+	deleteNote,
+	updateNote,
+	getNote,
+} = require("../controllers/noteController");
 
 /*
 Fichero6/Paso9 (Si aun no has revisado los pasos anteriores a este,
@@ -33,7 +39,8 @@ realizar una peticion get a la ruta:
 http://localhost:5000/api/notes/
 Mas adelante veremos mas tipos de rutas para que se entienda mejor.
 */
-router.route("/").get(getAllNotes);
+router.route("/").get(getAllNotes).post(createNote);
+router.route("/:id").get(getNote).delete(deleteNote).put(updateNote);
 /* Final Paso9 */
 
 /*
