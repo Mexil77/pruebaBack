@@ -44,7 +44,7 @@ al correr en computadoras deben escuchar por un puerto
 en nuestro caso estamos asignando el puerto 5000
 */
 /* Setings */
-app.set("port", 5000);
+app.set("port", process.env.PORT || 5000);
 /*
 El metodo SET se usa para ir agregando caracteristicas o valores
 a la instancia de express que declaramos, es lo equivalente
